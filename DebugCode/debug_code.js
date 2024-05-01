@@ -6,10 +6,14 @@ let num2 = parseInt(document.getElementById('input2').value);
 // Check if inputs are valid numbers
 if (!isNaN(num1) && !isNaN(num2)) {
 // Perform the operation
-                let result = multiply(num1, num2);
+                let resultMult = multiply(num1, num2);
+                let resultSum = sum(num1,num2);
+                let resultDiv = division(num1,num2);
 
                 // Display the result
-                displayResult(result);
+                displayResultMult(resultMult);
+                displayResultSum(resultSum);
+                displayResultDiv(resultDiv);
             } else {
                 displayResult('Please enter valid numbers');
             }
@@ -23,9 +27,31 @@ if (!isNaN(num1) && !isNaN(num2)) {
             return a * b;
         }
 
-        function displayResult(result) {
+        function sum (a, b) {
+            debugger;
+            return a + b;
+        }
+
+        function division (a, b) {
+            debugger;
+            return a - b;
+        }
+
+        function displayResultMult(resultMult) {
             // Display the result in the paragraph element
-            const resultElement = document.getElementById('result');
-            resultElement.textContent = `The result is: ${result}`;
+            const resultElement = document.getElementById('result1');
+            resultElement.textContent = `The resultMult is: ${resultMult}`;
+        }
+
+        function displayResultSum(resultSum) {
+            // Display the result in the paragraph element
+            const resultElement = document.getElementById('result2');
+            resultElement.textContent = `The resultSum is: ${resultSum}`;
+        }
+
+        function displayResultDiv(resultDiv) {
+            // Display the result in the paragraph element
+            const resultElement = document.getElementById('result3');
+            resultElement.textContent = `The resultDiv is: ${resultDiv}`;
         }
     //</script>
