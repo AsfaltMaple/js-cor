@@ -40,3 +40,8 @@ function clearCompletedTasks() {
     displayTasks();
 
 }
+
+function clearAll() {
+    tasks = [];
+    displayTasks();
+}
